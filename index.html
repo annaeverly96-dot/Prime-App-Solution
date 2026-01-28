@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prime App Solution – Smart Digital Solutions for Modern Businesses</title>
+  <meta name="description" content="Prime App Solution delivers scalable, secure, and user-focused app development and digital solutions for modern businesses." />
+
+  <style>
+    :root{
+      /* Brand-first, professional palette */
+      --bg: #070A12;            /* deep navy */
+      --surface: #0B1222;       /* card base */
+      --surface-2:#0E1930;      /* card hover */
+      --text: #EAF0FF;          /* near-white */
+      --muted:#A9B4D0;          /* muted text */
+      --line:#1B2A4A;           /* borders */
+
+      --primary:#19D3C5;        /* teal */
+      --primary-2:#4B6BFF;      /* royal blue */
+      --accent:#FF4D6D;         /* coral */
+      --gold:#FFC857;           /* highlight */
+
+      --radius: 18px;
+      --radius-lg: 28px;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --shadow-soft: 0 10px 30px rgba(0,0,0,.28);
+      --max: 1180px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(75,107,255,.28), transparent 60%),
+        radial-gradient(700px 420px at 80% 12%, rgba(25,211,197,.22), transparent 62%),
+        radial-gradient(900px 560px at 50% 100%, rgba(255,77,109,.16), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.55;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{width:100%;}
+    .container{
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:30;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(7,10,18,.78), rgba(7,10,18,.35));
+      border-bottom: 1px solid rgba(27,42,74,.55);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding: 16px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 220px;
+    }
+    .logo{
+      width:42px;height:42px;border-radius:14px;
+      background:
+        radial-gradient(12px 12px at 30% 30%, rgba(255,200,87,.95), transparent 60%),
+        radial-gradient(14px 14px at 70% 35%, rgba(25,211,197,.95), transparent 62%),
+        radial-gradient(18px 18px at 55% 75%, rgba(75,107,255,.9), transparent 65%),
+        linear-gradient(135deg, rgba(25,211,197,.35), rgba(75,107,255,.25));
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: var(--shadow-soft);
+    }
+    .brand h1{
+      font-size: 14px;
+      margin:0;
+      letter-spacing:.3px;
+      font-weight:700;
+    }
+    .brand p{
+      margin:0;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .navlinks{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-end;
+    }
+    .navlinks a{
+      font-size: 13px;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: .22s ease;
+    }
+    .navlinks a:hover{
+      color: var(--text);
+      border-color: rgba(25,211,197,.25);
+      background: rgba(11,18,34,.55);
+    }
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(25,211,197,.18), rgba(75,107,255,.18));
+      border: 1px solid rgba(25,211,197,.28);
+      box-shadow: var(--shadow-soft);
+      color: var(--text);
+      font-weight: 650;
+      font-size: 13px;
+      transition:.22s ease;
+      white-space:nowrap;
+    }
+    .cta:hover{transform: translateY(-1px); border-color: rgba(255,200,87,.35)}
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 6px rgba(25,211,197,.12);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 54px 0 22px;
+      position:relative;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .heroCard{
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(11,18,34,.85), rgba(11,18,34,.55));
+      border: 1px solid rgba(27,42,74,.7);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .heroCard::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(420px 220px at 30% 0%, rgba(25,211,197,.22), transparent 60%),
+        radial-gradient(420px 240px at 90% 20%, rgba(75,107,255,.22), transparent 65%),
+        radial-gradient(520px 260px at 30% 120%, rgba(255,77,109,.14), transparent 60%);
+      pointer-events:none;
+      filter: blur(0px);
+    }
+    .heroInner{position:relative; z-index:1}
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(25,211,197,.10);
+      border: 1px solid rgba(25,211,197,.22);
+      color: #CFFCF8;
+      font-size: 13px;
+      font-weight: 650;
+    }
+    .kicker span{
+      color: var(--gold);
+      font-weight: 750;
+    }
+    .hero h2{
+      margin: 14px 0 10px;
+      font-size: clamp(28px, 3.3vw, 46px);
+      line-height: 1.15;
+      letter-spacing: -0.6px;
+    }
+    .hero p{
+      margin:0 0 16px;
+      color: var(--muted);
+      font-size: 15.5px;
+      max-width: 62ch;
+    }
+
+    .linkPill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(75,107,255,.12);
+      border: 1px solid rgba(75,107,255,.25);
+      color: var(--text);
+      font-weight: 650;
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+    .linkPill:hover{transform: translateY(-1px); border-color: rgba(255,200,87,.35)}
+    .linkPill svg{opacity:.9}
+
+    .heroActions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .btnPrimary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(25,211,197,.95), rgba(75,107,255,.95));
+      color:#06101C;
+      font-weight: 800;
+      border: 0;
+      box-shadow: 0 16px 40px rgba(25,211,197,.18);
+      transition:.22s ease;
+    }
+    .btnPrimary:hover{transform: translateY(-1px); filter: brightness(1.03)}
+    .btnGhost{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: rgba(11,18,34,.55);
+      color: var(--text);
+      border: 1px solid rgba(27,42,74,.75);
+      transition:.22s ease;
+      font-weight: 700;
+    }
+    .btnGhost:hover{transform: translateY(-1px); border-color: rgba(25,211,197,.30)}
+    .stats{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+      margin-top: 18px;
+    }
+    .stat{
+      padding: 14px 14px;
+      border-radius: 16px;
+      background: rgba(14,25,48,.52);
+      border: 1px solid rgba(27,42,74,.65);
+    }
+    .stat b{display:block; font-size: 15px}
+    .stat small{color: var(--muted); font-size: 12px}
+
+    /* Side panel */
+    .side{
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(14,25,48,.78), rgba(11,18,34,.48));
+      border: 1px solid rgba(27,42,74,.70);
+      box-shadow: var(--shadow-soft);
+    }
+    .side h3{
+      margin:0 0 10px;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    .checklist{
+      display:grid;
+      gap:10px;
+      margin: 14px 0 0;
+      padding:0;
+      list-style:none;
+    }
+    .checklist li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+    .tick{
+      width:18px;height:18px; flex: 0 0 18px;
+      border-radius: 6px;
+      background: rgba(25,211,197,.12);
+      border: 1px solid rgba(25,211,197,.25);
+      display:grid;
+      place-items:center;
+      margin-top: 2px;
+    }
+
+    /* Sections */
+    main{padding: 10px 0 70px}
+    .section{
+      margin-top: 26px;
+    }
+    .sectionHeader{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom: 14px;
+    }
+    .sectionHeader h3{
+      margin:0;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+    .sectionHeader p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13.5px;
+      max-width: 60ch;
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .card{
+      padding: 18px;
+      border-radius: var(--radius);
+      background: rgba(11,18,34,.55);
+      border: 1px solid rgba(27,42,74,.72);
+      box-shadow: 0 10px 30px rgba(0,0,0,.22);
+      transition: .22s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      background: rgba(14,25,48,.62);
+      border-color: rgba(25,211,197,.25);
+    }
+    .card h4{margin: 6px 0 6px; font-size: 15.5px}
+    .card p{margin:0; color: var(--muted); font-size: 13.5px}
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 750;
+      color: #DFFAF7;
+      background: rgba(25,211,197,.12);
+      border: 1px solid rgba(25,211,197,.22);
+    }
+    .badge.blue{
+      color:#E7ECFF;
+      background: rgba(75,107,255,.14);
+      border-color: rgba(75,107,255,.24);
+    }
+    .badge.pink{
+      color:#FFE6EC;
+      background: rgba(255,77,109,.12);
+      border-color: rgba(255,77,109,.22);
+    }
+
+    /* Services table */
+    .tableWrap{
+      border-radius: var(--radius-lg);
+      overflow:hidden;
+      border: 1px solid rgba(27,42,74,.72);
+      background: rgba(11,18,34,.55);
+      box-shadow: 0 14px 40px rgba(0,0,0,.28);
+    }
+    table{
+      width:100%;
+      border-collapse: collapse;
+    }
+    thead th{
+      text-align:left;
+      padding: 14px 16px;
+      font-size: 13px;
+      letter-spacing: .25px;
+      color: #DDE6FF;
+      background: linear-gradient(90deg, rgba(25,211,197,.14), rgba(75,107,255,.12));
+      border-bottom: 1px solid rgba(27,42,74,.72);
+    }
+    tbody td{
+      padding: 14px 16px;
+      color: var(--muted);
+      border-bottom: 1px solid rgba(27,42,74,.55);
+      font-size: 13.5px;
+    }
+    tbody tr:hover td{
+      background: rgba(14,25,48,.35);
+      color: #DDE6FF;
+    }
+    tbody tr:last-child td{border-bottom:0}
+    .tdStrong{color: var(--text); font-weight:750}
+
+    /* Highlight strip */
+    .strip{
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      background:
+        linear-gradient(135deg, rgba(255,200,87,.12), rgba(25,211,197,.10), rgba(75,107,255,.10));
+      border: 1px solid rgba(255,200,87,.18);
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .strip strong{font-size: 14.5px}
+    .strip span{color: var(--muted); font-size: 13.5px}
+
+    /* Footer */
+    footer{
+      border-top: 1px solid rgba(27,42,74,.7);
+      background: rgba(7,10,18,.6);
+      padding: 28px 0;
+    }
+    .footerGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:flex-start;
+    }
+    .social{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .social a{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(11,18,34,.55);
+      border: 1px solid rgba(27,42,74,.7);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      transition:.2s ease;
+    }
+    .social a:hover{
+      color: var(--text);
+      border-color: rgba(25,211,197,.28);
+      transform: translateY(-1px);
+    }
+    .fine{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns: 1fr; }
+      .grid3{grid-template-columns: 1fr; }
+      .stats{grid-template-columns: 1fr; }
+      .footerGrid{grid-template-columns: 1fr;}
+      .social{justify-content:flex-start;}
+      .brand{min-width:auto;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header>
+      <div class="container">
+        <div class="nav">
+          <div class="brand">
+            <div class="logo" aria-hidden="true"></div>
+            <div>
+              <h1>Prime App Solution</h1>
+              <p>Smart Digital Solutions for Modern Businesses</p>
+            </div>
+          </div>
+
+          <nav class="navlinks" aria-label="Primary">
+            <a href="#overview">Overview</a>
+            <a href="#services">Services</a>
+            <a href="#strengths">Strengths</a>
+            <a href="#security">Security</a>
+            <a class="cta" href="#contact">
+              <span class="dot" aria-hidden="true"></span>
+              Let’s Build Something
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <main class="container">
+
+      <!-- HERO -->
+      <section class="hero" id="overview">
+        <div class="heroGrid">
+          <div class="heroCard">
+            <div class="heroInner">
+              <div class="kicker">
+                <span>Prime</span> performance • clean UI/UX • scalable systems
+              </div>
+
+              <h2>Prime App Solution – Smart Digital Solutions for Modern Businesses</h2>
+
+              <p>
+                Prime App Solution is a forward-focused digital service provider dedicated to delivering reliable, scalable,
+                and innovative application solutions. In today’s fast-paced digital environment, businesses require
+                technology partners who understand functionality, performance, and user experience.
+                That’s exactly what
+                <a class="linkPill" href="https://primeappsolution.com/" target="_blank" rel="noopener noreferrer">
+                  <!-- icon -->
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M21 3l-9 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M10 5H7a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  Prime App Solution
+                </a>
+                is built around—structured development and digital services that support business growth and operational efficiency.
+              </p>
+
+              <div class="heroActions">
+                <a class="btnPrimary" href="#services">
+                  Explore Services
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </a>
+                <a class="btnGhost" href="#strengths">Why Choose Us</a>
+              </div>
+
+              <div class="stats" aria-label="Highlights">
+                <div class="stat">
+                  <b>Performance-first</b>
+                  <small>Optimized builds for real-world usage</small>
+                </div>
+                <div class="stat">
+                  <b>Scalable architecture</b>
+                  <small>Designed to grow with demand</small>
+                </div>
+                <div class="stat">
+                  <b>UX-driven delivery</b>
+                  <small>Interfaces that feel intuitive & premium</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="side">
+            <h3>What Is Prime App Solution</h3>
+            <p style="margin:0;color:var(--muted);font-size:13.5px;">
+              Prime App Solution is a technology-driven platform specializing in application development and digital solutions.
+              The focus is on transforming ideas into functional, user-friendly, and performance-oriented applications—aligned
+              with modern business needs.
+            </p>
+
+            <ul class="checklist">
+              <li>
+                <span class="tick" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                Customized approach (no one-size-fits-all solutions)
+              </li>
+              <li>
+                <span class="tick" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                Clean workflows, maintainable code, and tested standards
+              </li>
+              <li>
+                <span class="tick" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                Reliable support for startups, SMEs, and enterprises
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- VISION + APPROACH -->
+      <section class="section" id="approach">
+        <div class="sectionHeader">
+          <div>
+            <h3>Core Vision and Business Approach</h3>
+            <p>
+              The vision centers on delivering value-driven digital products that align with business objectives.
+              Each project is planned strategically and built for stability, usability, and measurable outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="badge">Strategy</div>
+            <h4>Goal-aligned Delivery</h4>
+            <p>
+              Instead of generic implementation, every product is mapped to your business objectives to ensure clarity,
+              relevance, and long-term value.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="badge blue">Execution</div>
+            <h4>Structured Development Workflow</h4>
+            <p>
+              From discovery and planning to deployment and iteration—each stage is managed with consistency, precision,
+              and performance in mind.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="badge pink">Outcome</div>
+            <h4>Business-ready Results</h4>
+            <p>
+              Digital solutions are delivered with practical usability, scalable architecture, and maintainability
+              to support real business growth.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- DEVELOPMENT EXPERTISE -->
+      <section class="section" id="development">
+        <div class="sectionHeader">
+          <div>
+            <h3>Application Development Expertise</h3>
+            <p>
+              Prime App Solution provides comprehensive application development services designed to meet modern standards.
+              From concept planning to final deployment, every stage is managed with attention to performance, security,
+              and scalability.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="badge">Planning</div>
+            <h4>Concept to Roadmap</h4>
+            <p>
+              Requirements are structured into a clear roadmap so your application development stays focused, predictable,
+              and efficient.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="badge blue">Build</div>
+            <h4>Cross-platform Reliability</h4>
+            <p>
+              Applications are designed to function smoothly across platforms with intuitive experiences that boost
+              engagement and retention.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="badge pink">Release</div>
+            <h4>Deployment & Optimization</h4>
+            <p>
+              Launch-ready delivery with performance checks, security basics, and scalability planning to ensure
+              stable operation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- TECH STANDARDS -->
+      <section class="section" id="standards">
+        <div class="sectionHeader">
+          <div>
+            <h3>Technology and Development Standards</h3>
+            <p>
+              Quality technology forms the foundation. Development processes follow structured workflows, ensuring
+              clean code, optimized performance, and long-term maintainability under real-world usage.
+            </p>
+          </div>
+        </div>
+
+        <div class="strip">
+          <div>
+            <strong>Modern frameworks + tested methodology</strong><br/>
+            <span>Stable, future-ready builds that scale with your business.</span>
+          </div>
+
+          <!-- SECOND LINK (mid-content) -->
+          <a class="linkPill" href="https://primeappsolution.com/services/" target="_blank" rel="noopener noreferrer" title="Explore service offerings">
+            <!-- icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Explore our custom app development services
+          </a>
+        </div>
+      </section>
+
+      <!-- SERVICES TABLE -->
+      <section class="section" id="services">
+        <div class="sectionHeader">
+          <div>
+            <h3>Key Services Offered</h3>
+            <p>
+              A focused service suite designed for digital growth—covering development, design, custom systems, and long-term support.
+            </p>
+          </div>
+        </div>
+
+        <div class="tableWrap" role="region" aria-label="Services table">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:28%;">Service Area</th>
+                <th style="width:36%;">Focus</th>
+                <th>Business Benefit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tdStrong">App Development</td>
+                <td>Functional and scalable apps</td>
+                <td>Improved digital presence</td>
+              </tr>
+              <tr>
+                <td class="tdStrong">UI/UX Design</td>
+                <td>User-centered interfaces</td>
+                <td>Better engagement</td>
+              </tr>
+              <tr>
+                <td class="tdStrong">Custom Solutions</td>
+                <td>Tailored system development</td>
+                <td>Business-specific results</td>
+              </tr>
+              <tr>
+                <td class="tdStrong">Technical Support</td>
+                <td>Ongoing maintenance</td>
+                <td>Long-term reliability</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- UX -->
+      <section class="section" id="ux">
+        <div class="sectionHeader">
+          <div>
+            <h3>User Experience and Interface Design</h3>
+            <p>
+              User experience plays a critical role in digital success. Prime App Solution emphasizes clarity, navigation flow,
+              and responsiveness—resulting in products that feel intuitive and professional.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="badge">Clarity</div>
+            <h4>Interface Simplicity</h4>
+            <p>
+              Clean layouts and readable hierarchy help users move faster and feel confident inside your application.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="badge blue">Flow</div>
+            <h4>Navigation That Makes Sense</h4>
+            <p>
+              Smooth user journeys reduce friction, improve retention, and create a premium product experience.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="badge pink">Responsive</div>
+            <h4>Device-ready UI</h4>
+            <p>
+              Responsive design ensures consistent usability across screens without compromising performance or style.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SCALE + PERFORMANCE -->
+      <section class="section" id="strengths">
+        <div class="sectionHeader">
+          <div>
+            <h3>Scalability and Performance Focus</h3>
+            <p>
+              Systems are built to adapt as requirements grow—efficient architecture and optimized functionality keep apps
+              smooth even as user demand increases.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="badge">Scale</div>
+            <h4>Future-ready Architecture</h4>
+            <p>
+              Designed so your platform can expand without breaking performance—protecting long-term investment.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="badge blue">Speed</div>
+            <h4>Optimized Performance</h4>
+            <p>
+              Lean builds and efficient workflows ensure stable performance under real-world conditions.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="badge pink">Reliability</div>
+            <h4>Operational Confidence</h4>
+            <p>
+              Consistent delivery, clean execution, and dependable support—so businesses can scale with confidence.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE -->
+      <section class="section" id="why">
+        <div class="sectionHeader">
+          <div>
+            <h3>Why Businesses Choose Prime App Solution</h3>
+            <p>
+              Organizations choose Prime App Solution for structured execution, clear communication, and quality-focused delivery.
+              Solutions are aligned with business goals—not generic templates.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="badge">Advantage</div>
+            <h4>Customized Application Development</h4>
+            <p>Tailored solutions that match your exact requirements and workflow.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge blue">Advantage</div>
+            <h4>Performance + Usability First</h4>
+            <p>Balanced engineering and design to maximize engagement and efficiency.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge pink">Advantage</div>
+            <h4>Long-term Technical Reliability</h4>
+            <p>Ongoing maintenance, updates, and support to keep systems stable and relevant.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- INDUSTRIES -->
+      <section class="section" id="industries">
+        <div class="sectionHeader">
+          <div>
+            <h3>Industries and Business Applications</h3>
+            <p>
+              Prime App Solution supports a wide range of industries with adaptable digital solutions that integrate into
+              existing workflows—improving efficiency and user interaction.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="badge">Versatile</div>
+            <h4>Workflow Integration</h4>
+            <p>Designed to connect smoothly with your operational processes and tools.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge blue">Flexible</div>
+            <h4>Business-specific Requirements</h4>
+            <p>Built to handle diverse needs while maintaining consistent quality and structure.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge pink">Consistent</div>
+            <h4>Quality Across Use Cases</h4>
+            <p>Professional development standards applied regardless of industry or scale.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECURITY -->
+      <section class="section" id="security">
+        <div class="sectionHeader">
+          <div>
+            <h3>Security and Data Protection</h3>
+            <p>
+              Security is fundamental. Structured practices protect data integrity and system functionality through secure coding
+              standards and controlled access mechanisms.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="badge">Security</div>
+            <h4>Secure Development Practices</h4>
+            <p>Security considerations are embedded throughout the development process.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge blue">Control</div>
+            <h4>Access & Integrity</h4>
+            <p>Controlled access mechanisms reduce risk and support modern compliance expectations.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge pink">Stability</div>
+            <h4>Risk Reduction</h4>
+            <p>Structured safeguards help maintain continuity and protect long-term operations.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- COLLAB + SUPPORT -->
+      <section class="section" id="contact">
+        <div class="sectionHeader">
+          <div>
+            <h3>Client Collaboration, Transparency, and Long-Term Support</h3>
+            <p>
+              Successful solutions require clear collaboration. Prime App Solution keeps clients informed at every stage and
+              provides ongoing support, monitoring, and updates to maintain performance over time.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <div class="badge">Collaboration</div>
+            <h4>Transparent Communication</h4>
+            <p>Clients stay aligned and informed from planning to delivery and beyond.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge blue">Support</div>
+            <h4>Ongoing Maintenance</h4>
+            <p>Performance monitoring and system updates keep products stable and relevant.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge pink">Value</div>
+            <h4>Long-Term Digital Continuity</h4>
+            <p>Reliable solutions that support growth, stability, and operational confidence.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONCLUSION -->
+      <section class="section" id="conclusion">
+        <div class="sectionHeader">
+          <div>
+            <h3>Conclusion</h3>
+            <p>
+              Prime App Solution represents reliability, innovation, and professional digital development.
+              Through structured processes, modern technology, and a client-focused approach, the company delivers
+              scalable solutions that support growth and efficiency.
+            </p>
+          </div>
+        </div>
+
+        <div class="strip">
+          <div>
+            <strong>Ready to build a dependable, scalable digital product?</strong><br/>
+            <span>Partner with a solution-oriented team that prioritizes performance, usability, and strategic alignment.</span>
+          </div>
+          <a class="btnPrimary" href="#services">
+            View Services
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footerGrid">
+          <div>
+            <div class="brand" style="margin-bottom:6px;">
+              <div class="logo" aria-hidden="true"></div>
+              <div>
+                <h1 style="font-size:14px;margin:0;">Prime App Solution</h1>
+                <p style="margin:0;font-size:12px;color:var(--muted);">Smart Digital Solutions for Modern Businesses</p>
+              </div>
+            </div>
+            <div class="fine">
+              © <span id="year"></span> Prime App Solution. All rights reserved. Built with performance, clarity, and scalability in mind.
+            </div>
+          </div>
+
+          <div>
+            <div style="color:#DDE6FF;font-weight:750;margin-bottom:10px;">Social Links</div>
+            <div class="social" aria-label="Social links">
+              <a href="https://www.facebook.com/primeappsolution" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <!-- facebook icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v3H8v3h3v6h3v-6h3l1-3h-4v-3c0-.6.4-1 1-1z" fill="currentColor"/>
+                </svg>
+                Facebook
+              </a>
+
+              <a href="https://x.com/primeappsol" target="_blank" rel="noopener noreferrer" aria-label="X">
+                <!-- X icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M18.5 3H21l-6.6 7.6L22 21h-6.2l-4.8-6.2L5.6 21H3l7.2-8.2L2 3h6.3l4.4 5.7L18.5 3z" fill="currentColor"/>
+                </svg>
+                X
+              </a>
+
+              <a href="https://www.linkedin.com/company/primeappsolution" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <!-- linkedin icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6.5 6.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="currentColor"/>
+                  <path d="M3.5 21h6V9h-6v12z" fill="currentColor"/>
+                  <path d="M13 9h5.7v1.7h.1c.8-1.4 2.6-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.1V21h-6v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-6V9z" fill="currentColor"/>
+                </svg>
+                LinkedIn
+              </a>
+
+              <a href="https://www.instagram.com/primeappsolution" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <!-- instagram icon -->
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
